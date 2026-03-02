@@ -277,7 +277,7 @@ export default function TakeSurveyPage({ params }: { params: Promise<{ surveyId:
         aria-hidden
       >
         <img
-          src="/panda-logo.svg"
+          src="/panda-logo.png"
           alt=""
           width={96}
           height={96}
