@@ -271,9 +271,10 @@ export default function TakeSurveyPage({ params }: { params: Promise<{ surveyId:
         </form>
       </div>
 
-      {/* Logo panda in basso a destra: solo l'immagine, nessuna modifica */}
+      {/* Logo panda: ritaglio circolare e sfondo trasparente così non si vede nessun riquadro */}
       <div
-        className="fixed bottom-4 right-4 z-20 w-20 h-20 md:w-24 md:h-24 pointer-events-none flex items-center justify-center"
+        className="fixed bottom-4 right-4 z-20 w-20 h-20 md:w-24 md:h-24 pointer-events-none rounded-full overflow-hidden bg-transparent"
+        style={{ boxShadow: "none" }}
         aria-hidden
       >
         <img
@@ -281,7 +282,8 @@ export default function TakeSurveyPage({ params }: { params: Promise<{ surveyId:
           alt=""
           width={96}
           height={96}
-          className="max-w-full max-h-full w-auto h-auto object-contain"
+          className="w-full h-full object-cover object-center"
+          style={{ background: "transparent", display: "block" }}
         />
       </div>
     </div>
