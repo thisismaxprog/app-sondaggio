@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // surveys: lettura e scrittura libere (nessun login richiesto)
+    match /surveys/{surveyId} {
+      allow read, write: if true;
+    }
+
+    // responses: chiunque può creare (invio risposte) e leggere (per vedere i risultati)
+    match /responses/{responseId} {
+      allow read, create: if true;
+      allow update, delete: if true;
+    }
+
+    // contacts: chiunque può creare (lead) e leggere (per vedere email/telefoni)
+    match /contacts/{contactId} {
+      allow read, create: if true;
+      allow update, delete: if true;
+    }
+  }
+}

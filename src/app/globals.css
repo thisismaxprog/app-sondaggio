@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15 23 42;
+  --background-rgb: 248 250 252;
+  /* Stile minimal survey: sfondo chiaro verde-grigio */
+  --survey-bg: #b8c4b8;
+  --survey-bg-with-image: rgba(0, 0, 0, 0.35);
+  --survey-text: #ffffff;
+  --survey-muted: rgba(255, 255, 255, 0.85);
+  /* Testo su sfondo chiaro (admin, card) */
+  --survey-text-on-light: #1a2e22;
+  --survey-muted-on-light: #4a6b5c;
+  --survey-accent: #5a8c6e;
+  --survey-accent-hover: #4a7a5c;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Honeypot: nascondi dal layout */
+input[name="website_url"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
