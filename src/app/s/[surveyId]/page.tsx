@@ -271,7 +271,7 @@ export default function TakeSurveyPage({ params }: { params: Promise<{ surveyId:
         </form>
       </div>
 
-      {/* Logo panda in basso a destra (SVG nitido come thegymbuddies) */}
+      {/* Logo panda in basso a destra: solo l'immagine, nessuna modifica */}
       <div
         className="fixed bottom-4 right-4 z-20 w-20 h-20 md:w-24 md:h-24 pointer-events-none flex items-center justify-center"
         aria-hidden
@@ -281,8 +281,7 @@ export default function TakeSurveyPage({ params }: { params: Promise<{ surveyId:
           alt=""
           width={96}
           height={96}
-          className="max-w-full max-h-full w-auto h-auto object-contain drop-shadow-md"
-          style={{ imageRendering: "crisp-edges" }}
+          className="max-w-full max-h-full w-auto h-auto object-contain"
         />
       </div>
     </div>
