@@ -271,18 +271,17 @@ export default function TakeSurveyPage({ params }: { params: Promise<{ surveyId:
         </form>
       </div>
 
-      {/* Logo panda: cerchio più grande (include orecchie) con sfondo bianco */} 
+      {/* Logo panda: nessun contorno, solo l'immagine originale */}
       <div
-        className="fixed bottom-4 right-4 z-20 w-28 h-28 md:w-36 md:h-36 pointer-events-none rounded-full overflow-hidden bg-white flex items-center justify-center"
+        className="fixed bottom-4 right-4 z-20 pointer-events-none"
         aria-hidden
       >
         <img
           src="/panda-logo.png"
           alt=""
-          width={144}
-          height={144}
-          className="w-[88%] h-[88%] object-contain"
-          style={{ display: "block" }}
+          width={96}
+          height={96}
+          className="w-24 h-24 md:w-28 md:h-28 object-contain"
         />
       </div>
     </div>
